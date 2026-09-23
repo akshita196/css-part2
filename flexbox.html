@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Flexbox</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Georgia, serif;
+        background-color: hsl(280, 40%, 97%);
+      }
+
+      .menu {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 20px;
+        background-color: hsl(280, 60%, 90%);
+      }
+
+      .menu > a {
+        color: hsl(280, 60%, 40%);
+        font-size: 24px;
+        text-decoration: none;
+      }
+
+      .menu > a:hover {
+        color: hsl(330, 80%, 60%);
+        border-bottom: 2px solid hsl(330, 80%, 60%);
+      }
+
+      h1 {
+        text-align: center;
+        color: hsl(280, 60%, 40%);
+      }
+
+      .cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .card {
+        width: 200px;
+        padding: 20px;
+        background-color: white;
+        border: 2px solid hsl(280, 60%, 80%);
+        border-radius: 12px;
+        text-align: center;
+      }
+
+      @media (max-width: 400px) {
+        .menu {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="menu">
+      <a href="#">art</a>
+      <a href="#">recipes</a>
+      <a href="#">travel</a>
+      <a href="#">about me</a>
+    </nav>
+
+    <h1>Welcome to Akshita's Corner</h1>
+
+    <div class="cards">
+      <div class="card">
+        <h2>Art</h2>
+        <p>Sketches and paintings by me</p>
+      </div>
+      <div class="card">
+        <h2>Recipes</h2>
+        <p>Dishes I want to cook</p>
+      </div>
+      <div class="card">
+        <h2>Travel</h2>
+        <p>Places I want to go</p>
+      </div>
+    </div>
+  </body>
+</html>
