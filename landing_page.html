@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+ 
+  <!-- Loads the Playfair Display font used by #main-title -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+ 
+  <style>
+    :root {
+      --accent-color: #35748a;
+      --bg-color: #ecddd7;
+    }
+ 
+    body {
+      background-color: var(--bg-color);
+      font-family: Helvetica, Arial, sans-serif;
+    }
+ 
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+ 
+    p {
+      max-width: 50ch;
+      margin: 0 auto;
+      /* border: 1px dashed; */
+ 
+      font-weight: 100;
+      font-size: 1.3rem;
+      line-height: 1.7rem;
+      text-align: center;
+    }
+ 
+    nav {
+      display: flex;
+      justify-content: center;
+ 
+      margin-top: 17px;
+      /* border: 1px dashed; */
+    }
+ 
+    @media (max-width: 450px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+ 
+    footer {
+      position: fixed;
+      bottom: 40px;
+ 
+      display: flex;
+      justify-content: space-around;
+ 
+      width: 100vw;
+      /* border: 1px dashed; */
+    }
+ 
+    footer img {
+      width: 32px;
+    }
+ 
+    .boxy-link {
+      margin: 8px;
+      border: 1px solid;
+      border-radius: 8px;
+      padding: 10px;
+ 
+      transition: transform 0.3s;
+    }
+ 
+    .boxy-link:hover {
+      background-color: var(--accent-color);
+      color: var(--bg-color);
+      transform: translateY(-3px);
+    }
+ 
+    @keyframes fadeIn {
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+ 
+    #main-title {
+      margin-top: 150px;
+      /* border: 1px dashed; */
+ 
+      font-family: 'Playfair Display';
+      font-weight: 900;
+      font-size: 48px;
+      font-style: italic;
+      text-align: center;
+      color: var(--accent-color);
+ 
+      transform: translateY(10px);
+      opacity: 0;
+ 
+      animation: fadeIn 1s forwards 0.25s;
+    }
+ 
+    @media (max-width: 450px) {
+      #main-title {
+        margin-top: 50px;
+      }
+    }
+  </style>
+</head>
+<body>
+ 
+  <h1 id="main-title">Your Name</h1>
+ 
+  <p>
+    A short introduction about yourself goes here. Say who you are,
+    what you study, and what you like to make.
+  </p>
+ 
+  <nav>
+    <a class="boxy-link" href="#">About</a>
+    <a class="boxy-link" href="#">Projects</a>
+    <a class="boxy-link" href="#">Resume</a>
+    <a class="boxy-link" href="#">Contact</a>
+  </nav>
+ 
+  <footer>
+    <a href="#"><img src="icon1.png" alt="Icon 1"></a>
+    <a href="#"><img src="icon2.png" alt="Icon 2"></a>
+    <a href="#"><img src="icon3.png" alt="Icon 3"></a>
+  </footer>
+ 
+</body>
+</html>
